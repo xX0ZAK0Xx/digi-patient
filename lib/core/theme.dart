@@ -10,11 +10,13 @@ class AppTheme {
       brightness: Brightness.light,
       scaffoldBackgroundColor: AppColors.lightBg,
       fontFamily: 'OpenSans',
-      colorScheme: ColorScheme.light(
+      colorScheme: ColorScheme.fromSeed(
         primary: AppColors.primary,
+        seedColor: AppColors.primary,
         secondary: AppColors.secondary,
         error: AppColors.error,
         surface: AppColors.lightBg,
+        brightness: Brightness.light,
       ),
       textTheme: TextTheme(
         displayLarge: AppTextStyles.title,
@@ -27,33 +29,6 @@ class AppTheme {
         elevation: 0,
         iconTheme: IconThemeData(color: AppColors.lightText),
         titleTextStyle: TextStyle(color: AppColors.lightText, fontSize: 20, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-
-  static ThemeData get darkTheme {
-    return ThemeData(
-      useMaterial3: true,
-      brightness: Brightness.dark,
-      scaffoldBackgroundColor: AppColors.darkBg,
-      fontFamily: 'OpenSans',
-      colorScheme: ColorScheme.dark(
-        primary: AppColors.primary,
-        secondary: AppColors.secondary,
-        error: AppColors.error,
-        surface: AppColors.darkBg,
-      ),
-      textTheme: TextTheme(
-        displayLarge: AppTextStyles.titleDark,
-        titleMedium: AppTextStyles.subtitleDark,
-        bodyMedium: AppTextStyles.bodyDark,
-        labelLarge: AppTextStyles.buttonDark,
-      ),
-      appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.darkBg,
-        elevation: 0,
-        iconTheme: IconThemeData(color: AppColors.darkText),
-        titleTextStyle: TextStyle(color: AppColors.darkText, fontSize: 20, fontWeight: FontWeight.bold),
       ),
     );
   }
