@@ -15,7 +15,7 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(AppSizes.circleAvatarRadius),
+      padding: const EdgeInsets.all(AppSizes.paddingBody),
       child: Row(
         spacing: AppSizes.paddingInside,
         children: [

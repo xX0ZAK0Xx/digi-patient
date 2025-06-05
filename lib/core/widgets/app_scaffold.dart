@@ -29,7 +29,7 @@ class AppScaffold extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            AppColors.gradientBlue,
+            AppColors.bgGradientBlue,
             AppColors.white,
           ],
           stops: [

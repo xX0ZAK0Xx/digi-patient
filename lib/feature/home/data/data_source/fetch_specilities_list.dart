@@ -1,0 +1,24 @@
+List<String> fetchSpecialitiesList() {
+  return [
+    "Cardiologist",
+    "Dermatologist",
+    "Neurologist",
+    "Pediatrician",
+    "Psychiatrist",
+    "Gynecologist",
+    "Ophthalmologist",
+    "Orthopedic",
+    "Radiologist",
+    "Oncologist",
+    "Dentist",
+    "Endocrinologist",
+    "Gastroenterologist",
+    "Hematologist",
+    "Nephrologist",
+    "Pulmonologist",
+    "Rheumatologist",
+    "Urologist",
+    "Immunologist",
+    "General Physician",
+  ];
+}

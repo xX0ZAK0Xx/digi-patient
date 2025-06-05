@@ -28,6 +28,12 @@ class _RootState extends State<Root> {
   ];
 
   @override
+  void dispose() {
+    pageIndex.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AppScaffold(
       body: ValueListenableBuilder(
@@ -43,11 +49,19 @@ class _RootState extends State<Root> {
               blurRadius: 10,
             ),
           ],
+          gradient: const LinearGradient(
+            colors: [
+              AppColors.primaryG,
+              AppColors.primary,
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
         ),
         child: FloatingActionButton(
           shape: const CircleBorder(),
           onPressed: () => pageIndex.value = 2,
-          backgroundColor: AppColors.primary,
+          backgroundColor: Colors.transparent,
           elevation: 0,
           child: HugeIcon(
             icon: HugeIcons.strokeRoundedQrCode,
