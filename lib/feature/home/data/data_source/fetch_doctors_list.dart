@@ -9,6 +9,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 10,
       fees: 1000.0,
       totalReview: 45,
+      rating: 4.5,
     ),
     DoctorModel(
       name: "Dr. Sarah Lee",
@@ -17,6 +18,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 8,
       fees: 800.0,
       totalReview: 25,
+      rating: 4
     ),
     DoctorModel(
       name: "Dr. Alex Morgan",
@@ -25,6 +27,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 12,
       fees: 1200.0,
       totalReview: 48,
+      rating: 5
     ),
     DoctorModel(
       name: "Dr. Lisa Brown",
@@ -33,6 +36,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 7,
       fees: 900.0,
       totalReview: 43,
+      rating: 4.5
     ),
     DoctorModel(
       name: "Dr. Michael Smith",
@@ -41,6 +45,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 11,
       fees: 950.0,
       totalReview: 46,
+      rating: 4.5
     ),
     DoctorModel(
       name: "Dr. Emma Wilson",
@@ -49,6 +54,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 9,
       fees: 850.0,
       totalReview: 35,
+      rating: 5
     ),
     DoctorModel(
       name: "Dr. Daniel Johnson",
@@ -57,6 +63,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 10,
       fees: 700.0,
       totalReview: 68,
+      rating: 5
     ),
     DoctorModel(
       name: "Dr. Olivia Martin",
@@ -65,6 +72,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 6,
       fees: 1100.0,
       totalReview: 75,
+      rating: 4.5
     ),
     DoctorModel(
       name: "Dr. William Anderson",
@@ -73,6 +81,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 13,
       fees: 1000.0,
       totalReview: 15,
+      rating: 4
     ),
     DoctorModel(
       name: "Dr. Emily Davis",
@@ -81,6 +90,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 15,
       fees: 1300.0,
       totalReview: 78,
+      rating: double.infinity
     ),
     DoctorModel(
       name: "Dr. Thomas Garcia",
@@ -89,6 +99,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 5,
       fees: 600.0,
       totalReview: 120,
+      rating: 4
     ),
     DoctorModel(
       name: "Dr. Ava Martinez",
@@ -97,6 +108,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 9,
       fees: 950.0,
       totalReview: 26,
+      rating: 4.5
     ),
     DoctorModel(
       name: "Dr. James Robinson",
@@ -105,6 +117,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 11,
       fees: 1100.0,
       totalReview: 42,
+      rating: 5
     ),
     DoctorModel(
       name: "Dr. Isabella Clark",
@@ -113,6 +126,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 10,
       fees: 1000.0,
       totalReview: 26,
+      rating: 4.5
     ),
     DoctorModel(
       name: "Dr. Benjamin Rodriguez",
@@ -121,6 +135,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 7,
       fees: 900.0,
       totalReview: 95,
+      rating: 4
     ),
     DoctorModel(
       name: "Dr. Mia Lewis",
@@ -129,6 +144,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 6,
       fees: 800.0,
       totalReview: 39,
+      rating: 4
     ),
     DoctorModel(
       name: "Dr. Lucas Lee",
@@ -137,6 +153,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 8,
       fees: 850.0,
       totalReview: 18,
+      rating: 4.5
     ),
     DoctorModel(
       name: "Dr. Charlotte Walker",
@@ -145,6 +162,7 @@ List<DoctorModel> fetchDoctorsList() {
       experience: 9,
       fees: 1000.0,
       totalReview: 78,
+      rating: 4
     ),
   ];
 }

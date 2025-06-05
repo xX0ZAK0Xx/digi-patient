@@ -49,7 +49,7 @@ class _DoctorSpecialityWidgetState extends State<DoctorSpecialityWidget> {
                     decoration: BoxDecoration(
                       color: AppColors.white,
                       borderRadius: BorderRadius.circular(AppSizes.radiusBig),
-                      border: Border.all(color: speciality.value == fetchSpecialitiesList()[index - 1] ? AppColors.primary : AppColors.grey.withValues(alpha: 0.5))
+                      border: Border.all(color: speciality.value == fetchSpecialitiesList()[index - 1] ? AppColors.primary : AppColors.grey.withValues(alpha: 0.1))
                     ),
                     child: Center(child: Text(fetchSpecialitiesList()[index - 1], style: AppTextStyles.bodyBold.copyWith(color: speciality.value == fetchSpecialitiesList()[index - 1] ? AppColors.primary : AppColors.grey.withValues(alpha: 0.5)),)),
                   ),
