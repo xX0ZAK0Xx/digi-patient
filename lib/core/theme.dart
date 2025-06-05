@@ -8,7 +8,8 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      scaffoldBackgroundColor: AppColors.lightBg,
+      // scaffoldBackgroundColor: AppColors.lightBg,
+      scaffoldBackgroundColor: Colors.transparent,
       fontFamily: 'OpenSans',
       colorScheme: ColorScheme.fromSeed(
         primary: AppColors.primary,

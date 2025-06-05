@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 
 import '../core/colors.dart';
+import '../core/widgets/app_scaffold.dart';
 
 class Root extends StatefulWidget {
   const Root({super.key});
@@ -28,8 +29,7 @@ class _RootState extends State<Root> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBody: true,
+    return AppScaffold(
       body: ValueListenableBuilder(
         valueListenable: pageIndex,
         builder: (_, value, __) => screens[value],
@@ -56,14 +56,13 @@ class _RootState extends State<Root> {
           ),
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: ValueListenableBuilder(
         valueListenable: pageIndex,
         builder: (_, value, __) {
           return Container(
             padding: EdgeInsets.all(AppSizes.paddingBody),
             decoration: BoxDecoration(
-              color: AppColors.lightBg,
+              color: AppColors.lightBgBottomNav,
               border: const Border(
                 top: BorderSide(color: Colors.white, width: 1.5),
               ),
