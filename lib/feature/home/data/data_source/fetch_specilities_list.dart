@@ -1,5 +1,6 @@
 List<String> fetchSpecialitiesList() {
   return [
+    "All",
     "Cardiologist",
     "Dermatologist",
     "Neurologist",

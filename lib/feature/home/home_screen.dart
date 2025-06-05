@@ -1,5 +1,6 @@
 import 'package:digi_patient/core/sizes.dart';
 import 'package:flutter/material.dart';
+import 'widgets/doctor_speciality_widget.dart';
 import 'widgets/header_widget.dart';
 import 'widgets/search_widget.dart';
 import 'widgets/upcoming_schedule_widget.dart';
@@ -12,7 +13,8 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          spacing: AppSizes.paddingInside,
+          spacing: AppSizes.paddingBody,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //! Header,
             HeaderWidget(),
@@ -22,6 +24,9 @@ class HomeScreen extends StatelessWidget {
 
             //! Upcoming Schedule,
             UpcomingScheduleWidget(),
+
+            //! Doctor Speciality,
+            DoctorSpecialityWidget(),
           ],
         ),
       ),
