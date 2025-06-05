@@ -8,7 +8,7 @@ class AppColors {
   static const Color secondary = Color(0xff50D890);
   static const Color accent = Color(0xff157CFF);
   static const Color error = Color(0xffE53935);
-  static const Color grey = Color.fromARGB(255, 199, 199, 199);
+  static const Color grey = Color.fromARGB(255, 159, 159, 159);
   static const Color lightGrey = Color.fromARGB(255, 231, 231, 231);
   static const Color white = Color(0xffffffff);
 

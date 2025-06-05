@@ -1,7 +1,7 @@
 import 'package:digi_patient/core/sizes.dart';
 import 'package:digi_patient/feature/home/home_screen.dart';
 import 'package:digi_patient/feature/medicine/medicine_screen.dart';
-import 'package:digi_patient/feature/notification/notification_screen.dart';
+import 'package:digi_patient/feature/recources/resources_screen.dart';
 import 'package:digi_patient/feature/profile/profile_screen.dart';
 import 'package:digi_patient/feature/qr_code/qr_code_screen.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +23,7 @@ class _RootState extends State<Root> {
     HomeScreen(),
     MedicineScreen(),
     QrCodeScreen(),
-    NotificationScreen(),
+    ResourcesScreen(),
     ProfileScreen(),
   ];
 
@@ -89,7 +89,7 @@ class _RootState extends State<Root> {
                 ),
                 const SizedBox(width: 56), // Space for FAB (matches clipper)
                 BottomNavigationButton(
-                  icon: HugeIcons.strokeRoundedNotification03,
+                  icon: HugeIcons.strokeRoundedLibraries,
                   isSelected: value == 3,
                   onTap: () => pageIndex.value = 3,
                 ),

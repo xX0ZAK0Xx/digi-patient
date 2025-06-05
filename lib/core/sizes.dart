@@ -8,4 +8,6 @@ class AppSizes{
   static const double radiusSmall = 10;
   static const double radiusBig = 20;
 
+  static const double circleAvatarRadius = 30;
+
 }
