@@ -61,26 +61,23 @@ class RecommendedDoctorsWidget extends StatelessWidget {
                   spacing: AppSizes.paddingInside,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Hero(
-                      tag: doctor.name,
-                      child: AppCachedNetworkImage(
-                        url: doctor.image, 
-                        radius: AppSizes.radiusSmall, 
-                        isPerson: true,
-                        height: AppSizes.height(context, 70),
-                        width: AppSizes.height(context, 70),
-                      ),
+                    AppCachedNetworkImage(
+                      url: doctor.image, 
+                      radius: AppSizes.radiusSmall, 
+                      isPerson: true,
+                      height: AppSizes.height(context, 70),
+                      width: AppSizes.height(context, 70),
                     ),
                     //? doctor details
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(doctor.name, style: AppTextStyles.title.copyWith(color: AppColors.lightText), maxLines: 1, overflow: TextOverflow.ellipsis,),
+                          Text(doctor.name, style: AppTextStyles.subtitle.copyWith(fontWeight: FontWeight.w600), maxLines: 1, overflow: TextOverflow.ellipsis,),
                           Row(
                             spacing: AppSizes.paddingInside / 2,
                             children: [
-                              Text(doctor.speciality, style: AppTextStyles.body.copyWith(color: AppColors.lightText, fontWeight: FontWeight.bold),),
+                              Text(doctor.speciality, style: AppTextStyles.body,),
                               SizedBox(width: AppSizes.paddingInside / 2,),
                               HugeIcon(
                                 icon: HugeIcons.strokeRoundedStethoscope02,
