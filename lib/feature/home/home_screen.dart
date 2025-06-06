@@ -1,7 +1,7 @@
 import 'package:digi_patient/core/sizes.dart';
 import 'package:flutter/material.dart';
-import 'widgets/doctor_speciality_widget.dart';
 import 'widgets/header_widget.dart';
+import 'widgets/my_buttons.dart';
 import 'widgets/recommended_doctors_widget.dart';
 import 'widgets/search_widget.dart';
 import 'widgets/upcoming_schedule_widget.dart';
@@ -29,9 +29,14 @@ class HomeScreen extends StatelessWidget {
             UpcomingScheduleWidget(),
             SizedBox(height: AppSizes.paddingBody,),
 
-            //! Doctor Speciality,
-            DoctorSpecialityWidget(showTitle: true,),
+            //! Buttons,
+            MyButtons(),
             SizedBox(height: AppSizes.paddingBody,),
+
+
+            // //! Doctor Speciality,
+            // DoctorSpecialityWidget(showTitle: true,),
+            // SizedBox(height: AppSizes.paddingBody,),
 
             //! Recommended Doctors,
             RecommendedDoctorsWidget(),
