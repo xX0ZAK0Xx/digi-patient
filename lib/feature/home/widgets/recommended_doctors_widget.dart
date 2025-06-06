@@ -61,12 +61,15 @@ class RecommendedDoctorsWidget extends StatelessWidget {
                   spacing: AppSizes.paddingInside,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    AppCachedNetworkImage(
-                      url: doctor.image, 
-                      radius: AppSizes.radiusSmall, 
-                      isPerson: true,
-                      height: AppSizes.height(context, 70),
-                      width: AppSizes.height(context, 70),
+                    Hero(
+                      tag: doctor.name,
+                      child: AppCachedNetworkImage(
+                        url: doctor.image, 
+                        radius: AppSizes.radiusSmall, 
+                        isPerson: true,
+                        height: AppSizes.height(context, 70),
+                        width: AppSizes.height(context, 70),
+                      ),
                     ),
                     //? doctor details
                     Expanded(

@@ -30,7 +30,7 @@ class HeaderWidget extends StatelessWidget {
               Text("Welcome Back!", style: AppTextStyles.subtitle,),
               Text(
                 "Ahsan Habib", 
-                style: AppTextStyles.title,
+                style: AppTextStyles.titleBold,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis
               )

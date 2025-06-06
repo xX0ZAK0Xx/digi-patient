@@ -1,3 +1,4 @@
+import 'package:digi_patient/core/sizes.dart';
 import 'package:flutter/material.dart';
 
 import 'colors.dart';
@@ -20,7 +21,7 @@ class AppTheme {
         brightness: Brightness.light,
       ),
       textTheme: TextTheme(
-        displayLarge: AppTextStyles.title,
+        displayLarge: AppTextStyles.titleBold,
         titleMedium: AppTextStyles.subtitle,
         bodyMedium: AppTextStyles.body,
         labelLarge: AppTextStyles.button,
@@ -31,6 +32,12 @@ class AppTheme {
         iconTheme: IconThemeData(color: AppColors.lightText),
         titleTextStyle: TextStyle(color: AppColors.lightText, fontSize: 20, fontWeight: FontWeight.bold),
       ),
+      filledButtonTheme: FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          backgroundColor: AppColors.primary,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSizes.radiusSmall)),
+        )
+      )
     );
   }
 }

@@ -59,7 +59,9 @@ class AllDoctorScreen extends StatelessWidget {
                             Stack(
                               children: [
                                 //! Photo
-                                AppCachedNetworkImage(url: doctor.image, isPerson: true, height: AppSizes.height(context, 120), width: double.maxFinite, radius: AppSizes.radiusSmall,),
+                                Hero(
+                                  tag: doctor.name,
+                                  child: AppCachedNetworkImage(url: doctor.image, isPerson: true, height: AppSizes.height(context, 120), width: double.maxFinite, radius: AppSizes.radiusSmall,)),
                                 //! black gradient,
                                 // Positioned.fill(
                                 //   child: Container(

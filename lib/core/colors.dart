@@ -19,7 +19,5 @@ class AppColors {
 
   static const Color lightBg = Color.fromARGB(255, 239, 249, 255);
   static const Color lightBgBottomNav = Color.fromARGB(255, 246, 252, 255);
-  static const Color lightCard = Color(0xffffffff);
   static const Color lightText = Color(0xff272727);
-  static const Color lightShadow = Color(0x1A000000);
 }
