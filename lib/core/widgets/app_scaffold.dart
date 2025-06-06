@@ -11,6 +11,7 @@ class AppScaffold extends StatelessWidget {
   final Widget? bottomNavigationBar;
   final GlobalKey<ScaffoldState>? scaffoldKey;
   final bool? resizeToAvoidBottomInset;
+  final bool isCenterFAB;
 
   const AppScaffold({
     super.key,
@@ -18,6 +19,7 @@ class AppScaffold extends StatelessWidget {
     this.appBar,
     this.floatingActionButton,
     this.drawer,
+    this.isCenterFAB = true,
     this.scaffoldKey, this.bottomNavigationBar, this.resizeToAvoidBottomInset,
   });
 
@@ -39,9 +41,9 @@ class AppScaffold extends StatelessWidget {
         ),
       ),
       child: Scaffold(
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButtonLocation: isCenterFAB ? FloatingActionButtonLocation.centerDocked : FloatingActionButtonLocation.endFloat,
         resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? true,
-        key: scaffoldKey, // Use the scaffoldKey here
+        key: scaffoldKey, // Use the scafsfoldKey here
         backgroundColor: Colors.transparent,
         appBar: appBar,
         bottomNavigationBar: bottomNavigationBar,

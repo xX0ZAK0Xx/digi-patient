@@ -10,6 +10,7 @@ import '../../core/text_styles.dart';
 import '../../core/widgets/app_scaffold.dart';
 import '../details/doctor_details_screen.dart';
 import '../home/widgets/search_widget.dart';
+import 'add_doctor_bottom_sheet.dart';
 
 class AllDoctorScreen extends StatelessWidget {
   const AllDoctorScreen({super.key});
@@ -17,6 +18,14 @@ class AllDoctorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
+      isCenterFAB: false,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColors.primary,
+        child: const HugeIcon(icon: HugeIcons.strokeRoundedAdd01, color: AppColors.white, size: AppSizes.iconBig,),
+        onPressed: () {
+          showModalBottomSheet(context: context, builder: (context) => const AddDoctorBottomSheet());
+        },
+      ),
       body: SafeArea(
         child: Column(
           spacing: AppSizes.paddingBody,

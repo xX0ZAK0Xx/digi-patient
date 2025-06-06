@@ -16,6 +16,7 @@ class AppTextField extends StatelessWidget {
     this.validator,
     this.obscureText,
     this.suffixIcon,
+    this.prefixIcon,
     this.autofocus,
     this.expanded,
     this.focusNode,
@@ -31,6 +32,7 @@ class AppTextField extends StatelessWidget {
   final TextEditingController controller;
   final bool? obscureText;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
   final String hintText;
   final String labelText;
   final bool? autofocus;
@@ -74,6 +76,7 @@ class AppTextField extends StatelessWidget {
             enabled: enable,
             style: const TextStyle(fontSize: 14),
             decoration: InputDecoration(
+              prefixIcon: prefixIcon,
               suffixIcon: suffixIcon,
               hintText: hintText,
               hintStyle: const TextStyle(
@@ -94,7 +97,8 @@ class AppTextField extends StatelessWidget {
               ),
               errorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(AppSizes.radiusSmall),
-                borderSide: const BorderSide(color: Colors.redAccent, width: 0.5),
+                borderSide:
+                    const BorderSide(color: Colors.redAccent, width: 0.5),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(AppSizes.radiusSmall),
