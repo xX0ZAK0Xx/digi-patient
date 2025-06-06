@@ -1,4 +1,5 @@
 import 'package:digi_patient/feature/all_doctor/data/fetch_doctors_list.dart';
+import 'package:digi_patient/feature/details/doctor_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 
@@ -39,68 +40,72 @@ class RecommendedDoctorsWidget extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: AppSizes.paddingBody),
           itemBuilder: (context, index) {
             final doctor = doctors[index];
-            return Container(
-              padding: EdgeInsets.all(AppSizes.paddingInside),
-              decoration: BoxDecoration(
-                color: AppColors.white,
-                borderRadius: BorderRadius.circular(AppSizes.radiusBig),
-                // border: Border.all(color: AppColors.g,rey.withValues(alpha: 0.1))
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.primary.withValues(alpha: 0.08),
-                    blurRadius: 8,
-                    // spreadRadius: 1
-                  )
-                ]
-              ),
-              child: Row(
-                spacing: AppSizes.paddingInside,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  AppCachedNetworkImage(
-                    url: doctor.image, 
-                    radius: AppSizes.radiusSmall, 
-                    isPerson: true,
-                    height: AppSizes.height(context, 70),
-                    width: AppSizes.height(context, 70),
-                  ),
-                  //? doctor details
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(doctor.name, style: AppTextStyles.title.copyWith(color: AppColors.lightText), maxLines: 1, overflow: TextOverflow.ellipsis,),
-                        Row(
-                          spacing: AppSizes.paddingInside / 2,
-                          children: [
-                            Text(doctor.speciality, style: AppTextStyles.body.copyWith(color: AppColors.lightText, fontWeight: FontWeight.bold),),
-                            SizedBox(width: AppSizes.paddingInside / 2,),
-                            HugeIcon(
-                              icon: HugeIcons.strokeRoundedStethoscope02,
-                              color: AppColors.lightText,
-                              size: AppSizes.iconSmall,
-                            ),
-                            Text("${doctor.experience.toInt()} Years", style: AppTextStyles.body.copyWith(color: AppColors.lightText),),
-                          ],
-                        ),
-                        SizedBox(height: AppSizes.paddingInside / 2,),
-                        //!Ratings
-                        Row(
-                          spacing: AppSizes.paddingInside / 2,
-                          children: [
-                            HugeIcon(
-                              icon: Icons.star,
-                              color: AppColors.primary,
-                              size: AppSizes.iconSmall,
-                            ),
-                            Text(doctor.rating.toString(), style: AppTextStyles.bodyBold.copyWith(color: AppColors.lightText),),
-                            Text("(${doctor.totalReview.toString()})", style: AppTextStyles.bodyBold.copyWith(color: AppColors.grey),),
-                          ],
-                        )
-                      ],
+            return InkWell(
+              splashColor: Colors.transparent,
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DoctorDetailsScreen(doctor: doctor,))),
+              child: Container(
+                padding: EdgeInsets.all(AppSizes.paddingInside),
+                decoration: BoxDecoration(
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.circular(AppSizes.radiusBig),
+                  // border: Border.all(color: AppColors.g,rey.withValues(alpha: 0.1))
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.primary.withValues(alpha: 0.08),
+                      blurRadius: 8,
+                      // spreadRadius: 1
+                    )
+                  ]
+                ),
+                child: Row(
+                  spacing: AppSizes.paddingInside,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    AppCachedNetworkImage(
+                      url: doctor.image, 
+                      radius: AppSizes.radiusSmall, 
+                      isPerson: true,
+                      height: AppSizes.height(context, 70),
+                      width: AppSizes.height(context, 70),
                     ),
-                  )
-                ]
+                    //? doctor details
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(doctor.name, style: AppTextStyles.title.copyWith(color: AppColors.lightText), maxLines: 1, overflow: TextOverflow.ellipsis,),
+                          Row(
+                            spacing: AppSizes.paddingInside / 2,
+                            children: [
+                              Text(doctor.speciality, style: AppTextStyles.body.copyWith(color: AppColors.lightText, fontWeight: FontWeight.bold),),
+                              SizedBox(width: AppSizes.paddingInside / 2,),
+                              HugeIcon(
+                                icon: HugeIcons.strokeRoundedStethoscope02,
+                                color: AppColors.lightText,
+                                size: AppSizes.iconSmall,
+                              ),
+                              Text("${doctor.experience.toInt()} Years", style: AppTextStyles.body.copyWith(color: AppColors.lightText),),
+                            ],
+                          ),
+                          SizedBox(height: AppSizes.paddingInside / 2,),
+                          //!Ratings
+                          Row(
+                            spacing: AppSizes.paddingInside / 2,
+                            children: [
+                              HugeIcon(
+                                icon: Icons.star,
+                                color: AppColors.primary,
+                                size: AppSizes.iconSmall,
+                              ),
+                              Text(doctor.rating.toString(), style: AppTextStyles.bodyBold.copyWith(color: AppColors.lightText),),
+                              Text("(${doctor.totalReview.toString()})", style: AppTextStyles.bodyBold.copyWith(color: AppColors.grey),),
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ]
+                ),
               ),
             );
           },

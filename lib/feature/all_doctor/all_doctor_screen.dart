@@ -8,6 +8,7 @@ import 'package:hugeicons/hugeicons.dart';
 import '../../core/sizes.dart';
 import '../../core/text_styles.dart';
 import '../../core/widgets/app_scaffold.dart';
+import '../details/doctor_details_screen.dart';
 import '../home/widgets/search_widget.dart';
 
 class AllDoctorScreen extends StatelessWidget {
@@ -129,14 +130,17 @@ class AllDoctorScreen extends StatelessWidget {
                               ],
                             ),
                             Spacer(),
-                            Container(
-                              width: double.maxFinite,
-                              padding: const EdgeInsets.all(AppSizes.paddingInside),
-                              decoration: BoxDecoration(
-                                color: AppColors.primary.withValues(alpha: 0.2),
-                                borderRadius: BorderRadius.circular(AppSizes.radiusSmall)
+                            InkWell(
+                              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DoctorDetailsScreen(doctor: doctor))),
+                              child: Container(
+                                width: double.maxFinite,
+                                padding: const EdgeInsets.all(AppSizes.paddingInside),
+                                decoration: BoxDecoration(
+                                  color: AppColors.primary.withValues(alpha: 0.2),
+                                  borderRadius: BorderRadius.circular(AppSizes.radiusSmall)
+                                ),
+                                child: Text('Book Now', style: AppTextStyles.bodyBold.copyWith(color: AppColors.primary),textAlign: TextAlign.center,),
                               ),
-                              child: Text('Book Now', style: AppTextStyles.bodyBold.copyWith(color: AppColors.primary),textAlign: TextAlign.center,),
                             )
                           ],
                         ),
