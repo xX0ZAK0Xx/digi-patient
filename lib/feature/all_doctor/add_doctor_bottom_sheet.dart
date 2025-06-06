@@ -31,8 +31,6 @@ class _AddDoctorBottomSheetState extends State<AddDoctorBottomSheet> {
     super.dispose();
   }
 
-  void _onAddDoctor() {}
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -78,7 +76,9 @@ class _AddDoctorBottomSheetState extends State<AddDoctorBottomSheet> {
             children: [
               Expanded(
                 child: FilledButton(
-                  onPressed: _onAddDoctor,
+                  onPressed: (){
+                    Navigator.pop(context);
+                  },
                   child: Text("Add Doctor"),
                 ),
               ),
