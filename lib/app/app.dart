@@ -1,7 +1,7 @@
-import 'package:digi_patient/feature/root.dart';
 import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
+import '../feature/auth/login_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.lightTheme,
       themeMode: ThemeMode.system,
-      home: Root()
+      home: LoginScreen()
     );
   }
 }
