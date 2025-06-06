@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: AppSizes.paddingBody,),
 
             //! Doctor Speciality,
-            DoctorSpecialityWidget(),
+            DoctorSpecialityWidget(showTitle: true,),
             SizedBox(height: AppSizes.paddingBody,),
 
             //! Recommended Doctors,

@@ -6,7 +6,8 @@ import '../../../core/sizes.dart';
 import '../../../core/text_styles.dart';
 
 class DoctorSpecialityWidget extends StatefulWidget {
-  const DoctorSpecialityWidget({super.key});
+  const DoctorSpecialityWidget({super.key, required this.showTitle});
+  final bool showTitle;
 
   @override
   State<DoctorSpecialityWidget> createState() => _DoctorSpecialityWidgetState();
@@ -27,6 +28,7 @@ class _DoctorSpecialityWidgetState extends State<DoctorSpecialityWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: AppSizes.paddingInside,
       children: [
+        if(widget.showTitle)
         Padding(
           padding: EdgeInsets.symmetric(horizontal: AppSizes.paddingBody),
           child: Text('Doctor Speciality', style: AppTextStyles.subtitle.copyWith(fontWeight: FontWeight.w600),),

@@ -1,4 +1,4 @@
-import 'package:digi_patient/feature/home/data/data_source/fetch_doctors_list.dart';
+import 'package:digi_patient/feature/all_doctor/data/fetch_doctors_list.dart';
 import 'package:digi_patient/feature/home/data/model/upcoming_schedule_model.dart';
 
 List<UpcomingScheduleModel> fetchUpcomingScheduleList(){

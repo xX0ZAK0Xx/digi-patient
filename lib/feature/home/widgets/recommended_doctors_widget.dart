@@ -1,4 +1,4 @@
-import 'package:digi_patient/feature/home/data/data_source/fetch_doctors_list.dart';
+import 'package:digi_patient/feature/all_doctor/data/fetch_doctors_list.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 
@@ -6,6 +6,7 @@ import '../../../core/colors.dart';
 import '../../../core/sizes.dart';
 import '../../../core/text_styles.dart';
 import '../../../core/widgets/app_cached_network_image.dart' show AppCachedNetworkImage;
+import '../../all_doctor/all_doctor_screen.dart';
 
 class RecommendedDoctorsWidget extends StatelessWidget {
   const RecommendedDoctorsWidget({super.key});
@@ -24,7 +25,9 @@ class RecommendedDoctorsWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text('Recommended Doctors', style: AppTextStyles.subtitle.copyWith(fontWeight: FontWeight.w600),),
-              Text('See All', style: AppTextStyles.bodyBold.copyWith(color: AppColors.primary),)
+              InkWell(
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AllDoctorScreen())),
+                child: Text('See All', style: AppTextStyles.bodyBold.copyWith(color: AppColors.primary),))
             ],
           ),        
         ),
