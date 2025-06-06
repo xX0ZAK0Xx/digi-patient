@@ -27,8 +27,10 @@ class AppTheme {
         labelLarge: AppTextStyles.button,
       ),
       appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.lightBg,
+        backgroundColor: Colors.transparent,
+        centerTitle: true,
         elevation: 0,
+        scrolledUnderElevation: 0,
         iconTheme: IconThemeData(color: AppColors.lightText),
         titleTextStyle: TextStyle(color: AppColors.lightText, fontSize: 20, fontWeight: FontWeight.bold),
       ),
@@ -36,8 +38,16 @@ class AppTheme {
         style: FilledButton.styleFrom(
           backgroundColor: AppColors.primary,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSizes.radiusSmall)),
+          shadowColor: Colors.transparent,
+          elevation: 0,
         )
-      )
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSizes.radiusSmall), side: const BorderSide(color: AppColors.primary)),
+        )
+      ),
     );
   }
 }

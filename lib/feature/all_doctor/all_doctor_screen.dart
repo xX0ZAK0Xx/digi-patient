@@ -128,7 +128,7 @@ class AllDoctorScreen extends StatelessWidget {
                                 ),
                                 Text(doctor.rating.toString(), style: AppTextStyles.bodyBold.copyWith(color: AppColors.lightText),),
                                 SizedBox(width: AppSizes.paddingInside / 3,),
-                                Text("(${doctor.totalReview.toString()})", style: AppTextStyles.bodyBold.copyWith(color: AppColors.grey),),
+                                Text("(${doctor.totalReview.toString()})", style: AppTextStyles.body.copyWith(color: AppColors.grey),),
                               ],
                             ),
                             Spacer(),

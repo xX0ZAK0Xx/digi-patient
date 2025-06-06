@@ -23,3 +23,16 @@ String formatRemainingTime(int minutes) {
     return '$days day${days == 1 ? '' : 's'}';
   }
 }
+
+String formatMonth(DateTime date) => _monthAbbr[date.month - 1];
+String formatDay(DateTime date) => date.day.toString().padLeft(2, '0');
+String formatWeekday(DateTime date) => _weekdayAbbr[date.weekday - 1];
+
+const List<String> _monthAbbr = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
+
+const List<String> _weekdayAbbr = [
+  'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'
+];

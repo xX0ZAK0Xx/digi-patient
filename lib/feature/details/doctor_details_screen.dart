@@ -8,6 +8,7 @@ import 'package:hugeicons/hugeicons.dart';
 
 import '../../core/images.dart';
 import '../../core/sizes.dart';
+import '../book_appointment/book_appointment_screen.dart';
 
 class DoctorDetailsScreen extends StatelessWidget {
   final DoctorModel doctor;
@@ -227,24 +228,8 @@ class DoctorDetailsScreen extends StatelessWidget {
                               ],
                             ),
                             Spacer(),
-                            InkWell(
-                              onTap: (){},
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(vertical: AppSizes.paddingInside / 2, horizontal: AppSizes.paddingInside * 2),
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: AppColors.primary),
-                                  borderRadius: BorderRadius.circular(AppSizes.radiusSmall / 2),
-                                ),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      "Support",
-                                      style: AppTextStyles.subtitle.copyWith(color: AppColors.primary),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            )
+                            ElevatedButton(onPressed: (){
+                            }, child: Text("Support", style: AppTextStyles.subtitle,))
                           ],
                         ),
                       ],
@@ -254,7 +239,9 @@ class DoctorDetailsScreen extends StatelessWidget {
                   //? Book Appointment Button,
                   Row(
                     children: [
-                      Expanded(child: FilledButton(onPressed: (){}, child: Row(
+                      Expanded(child: FilledButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => BookAppointmentScreen(doctor: doctor)));
+                      }, child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         spacing: AppSizes.paddingInside,
                         children: [
